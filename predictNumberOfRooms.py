@@ -32,12 +32,22 @@ def main():
     if len(sys.argv) == 3:
         test_data_filepath, model_filepath = sys.argv[1:]
         print('Loading test data...\n    DATABASE: {}'.format(test_data_filepath))
+        
+        # read in the test data
         X = pd.read_json(test_data_filepath)
+        
+        # label encode the test data as it was done for training data
         le = preprocessing.LabelEncoder()
         le.fit(X.property_type)
         X['property_type'] = le.transform(X['property_type'])
+        
+        # transform into polynomial form
         test_data = transform_test_data(X)
+        
+        # load the saved model
         saved_model = load_model(model_filepath)
+        
+        # print the R2 score and the predicted number of bedrooms
         r2 = saved_model.rsquared.round(3)
         print("R2 score for the model:", r2)
         predictions = np.floor(saved_model.predict(test_data))
