@@ -1,7 +1,7 @@
 # Predict the Number of Bedrooms
 
 ## Project Overview
-Take home assignment for the [Street Group](https://www.streetgroup.co.uk/) to create a model to predict the number of bedrooms from the given dataset. The features include the type of property, floor area of the house, number of habitable rooms, estimated market prices, etc. This is clearly not a classification problem, but a regression problem since the number of bedrooms is a continuous variable. If I had more time I would explore the dataset more (apart from normalisation) and check the statistically significant features and re-train the model by removing the statistically insignificant features.
+Take home assignment for the [Street Group](https://www.streetgroup.co.uk/) to create a model to predict the number of bedrooms from the given dataset. The features include the type of property, floor area of the house, number of habitable rooms, estimated market prices, etc. This is clearly not a classification problem, but a regression problem since the number of bedrooms is a continuous variable. If I had more time I would explore the dataset more and check the statistically significant features and re-train the model by removing the statistically insignificant features.
 
 ## Project Components
 1. **Data and Model Exploration.ipynb**: This jupyter notebook includes the exploration of the dataset, pre-processing as required and exploration of multiple regression models along with the comparision of their metrics.
